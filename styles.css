@@ -1,0 +1,355 @@
+/* Base styles */
+body {
+    font-family: 'New Amsterdam', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #f5f5f5; /* Light background for better contrast */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8); /* Light, semi-transparent background */
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    align-items: center; 
+    justify-content: space-between; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.open-btn, .close-btn {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333; /* Darker color for better contrast */
+    transition: color 0.3s;
+}
+
+.open-btn:hover, .close-btn:hover {
+    color: #000; /* Hover effect */
+}
+
+.side-panel {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1000; /* Ensure side panel is above other content */
+}
+
+.side-panel a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-panel a:hover {
+    background-color: #575757;
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.main-content {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: rgb(87, 212, 118);
+    color: #fff;
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: 0.3s;
+    width: 200px;
+    border-radius: 50px; /* Rounded buttons */
+}
+
+button:hover {
+    background-color: rgb(70, 180, 100);
+}
+
+img:not(.img1, .Dish) {
+    width: 60px;
+    border-radius: 200px;
+    transition: 0.5s;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.fst2 {
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    margin: 5px 10px; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.fst2:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.fst {
+    width: 100%;
+    height: auto;
+    text-align: center; 
+}
+
+.butns {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.img1 {
+    margin-top: 60px;
+    max-width: 80%;
+    height: auto;
+    transition: transform 0.3s; /* Smooth hover effect */
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+
+.img1:hover {
+    transform: scale(1.05);
+}
+
+.TrackH {
+    margin-top: 50px;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#Dish {
+    width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Media Queries */
+
+/* For tablets and mobile devices */
+@media (max-width: 768px) {
+    .side-panel a {
+        font-size: 20px; 
+    }
+
+    .open-btn, .close-btn {
+        font-size: 24px; 
+    }
+
+    header {
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .fst2 {
+        font-size: 18px; 
+        margin: 5px 0; 
+    }
+
+    .butns button {
+        width: 100%; 
+    }
+
+    .img1 {
+        margin-top: 20px; 
+    }
+
+    .TrackH {
+        width: 90%;
+    }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+    .side-panel a {
+        font-size: 18px; 
+    }
+
+    .open-btn, .close-btn {
+        font-size: 20px; 
+    }
+
+    .fst2 {
+        font-size: 16px;
+    }
+
+    .butns button {
+        font-size: 14px; 
+    }
+}
+
+input {
+    width: 200px;
+    height: 36px;
+    border-radius: 26px;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    border: 2px solid #ccc;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+form {
+    padding-top: 15%;
+    text-align: center;
+}
+.open-btn{
+    position:absolute;
+}
+/* Leaderboard specific styles */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+ul#leaderboard {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+ul#leaderboard li {
+    font-size: 18px;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+
+ul#leaderboard li:last-child {
+    border-bottom: none;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    align-items: center; 
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.nav-center a {
+    margin: 0 15px;
+}
+
+.fst2 {
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.fst2:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Mobile and tablet adjustments */
+@media (max-width: 768px) {
+    ul#leaderboard {
+        width: 90%;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-center {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    ul#leaderboard li {
+        font-size: 16px;
+    }
+
+    .fst2 {
+        font-size: 16px;
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+.TrackH{
+    margin-top: 200px;
+}
+.inputs{
+    border-style: solid;
+    width: 220px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 36px;
+}
+.Generate{
+    font-size: 36px;
+}
